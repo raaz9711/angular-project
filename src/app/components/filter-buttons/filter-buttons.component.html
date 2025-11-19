@@ -1,0 +1,11 @@
+<div class="flex gap-3 mb-4 justify-center">
+      @for (f of filters; track f.value) {
+        <button
+          (click)="service.setFilter(f.value)"
+          [class]="f.value === currentFilter() 
+            ? 'px-4 py-2 bg-blue-600 text-white rounded' 
+            : 'px-4 py-2 bg-gray-200 text-gray-700 rounded'">
+          {{ f.label }}
+        </button>
+      }
+    </div>

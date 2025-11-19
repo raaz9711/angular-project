@@ -1,0 +1,14 @@
+<div class="flex gap-2">
+      <input
+        #input
+        [(ngModel)]="newTitle"
+        (keyup.enter)="addTodo(input)"
+        placeholder="What needs to be done?"
+        class="flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <button
+        (click)="addTodo(input)"
+        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        Add
+      </button>
+    </div>

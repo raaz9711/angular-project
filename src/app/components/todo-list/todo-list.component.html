@@ -1,0 +1,9 @@
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+      @for (todo of todos(); track todo.id) {
+        <div cdkDrag>
+          <app-todo-item [todo]="todo" />
+        </div>
+      } @empty {
+        <p class="text-center text-gray-500 py-10">No todos yet. Add one above!</p>
+      }
+    </div>
